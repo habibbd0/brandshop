@@ -5,7 +5,7 @@ const loadData = async() => {
 	showBrands(data);
 }
 loadData()
-
+// step - 1
 const showBrands = (brands) => {
 //    console.log(brands);
    const brandDiv = document.getElementById("brands");
@@ -26,17 +26,15 @@ const showBrands = (brands) => {
 }
 
 // product show 
-
-
 const loadProduct = async() => {
   const res = await fetch('https://cosmetics-backend-server.vercel.app/product');
   const data = await res.json()
   showProducts(data);
 };
 loadProduct()
-
-const showProducts = (product) => {
-  // console.log(product);
+// step - 2
+function showProducts(product) {
+  console.log(product);
   const productDiv = document.getElementById('products');
   product = product.slice(0,5)
   for(let products of product) {
